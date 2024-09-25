@@ -23,6 +23,10 @@ export function getDeliveryOption(deliveryOptionId) {
     }
   });
 
+  if(!deliveryOption){
+    return;
+  }
+
   return deliveryOption || deliveryOption[0];
 }
 
