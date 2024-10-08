@@ -1,13 +1,17 @@
 import { renderOrderSummary } from "../../scripts/checkout/orderSummary.js";
 import { loadFromStorage, cart } from "../../data/cart.js";
-import { loadProducts, loadPorductsFetch } from "../../data/products.js";
+import { loadProducts, loadProductsFetch } from "../../data/products.js";
 
 describe('test suite: renderOrderSummary', () => {
 
-    beforeAll((done)=>{
-        loadPorductsFetch().then(()=>{
-            done();
-        });
+    // beforeAll((done)=>{
+    //     loadProductsFetch().then(()=>{
+    //         done();
+    //     });
+    // });
+
+    beforeAll(async ()=>{
+            await loadProductsFetch();
     });
     
     const productId1 = 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6';
