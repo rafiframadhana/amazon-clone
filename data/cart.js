@@ -127,3 +127,9 @@ export async function loadCartFetch(){
     const message = await response.text();
     console.log(message);
 }
+
+
+export function updateCartQuantity() {
+    const cartQuantity = calculateCartQuantity();
+    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
