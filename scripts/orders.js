@@ -10,7 +10,7 @@ async function loadPage() {
     let ordersHTML = '';
 
     orders.forEach((order) => {
-        const orderTimeString = dayjs(order.orderTime).format('MMMM D')
+        const orderTimeString = dayjs(order.orderTime).format('MMMM D [at] HH:mm')
 
         ordersHTML += `
             <div class="order-container">
