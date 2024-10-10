@@ -102,7 +102,6 @@ async function loadPage() {
         });
     });
 
-    document.querySelectorAll('.js-track-package-button')
 
 }
 
