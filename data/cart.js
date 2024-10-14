@@ -131,5 +131,17 @@ export async function loadCartFetch(){
 
 export function updateCartQuantity() {
     const cartQuantity = calculateCartQuantity();
-    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+    const displayQuantity = document.querySelector('.js-cart-quantity');
+
+    if(cartQuantity === 0){
+        displayQuantity.innerHTML = '';
+    }else{
+        displayQuantity.innerHTML = cartQuantity
+    }
+    //document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
+
+export function resetCart(){
+    cart = [];
+    saveToStorage();
 }
