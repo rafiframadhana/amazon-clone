@@ -1,4 +1,4 @@
-import { addToCart, updateCartQuantity } from '../data/cart.js';
+import { addToCartMainPage, updateCartQuantity } from '../data/cart.js';
 import { products, loadProductsFetch } from '../data/products.js';
 
 async function renderProductsGrid() {
@@ -89,7 +89,7 @@ async function renderProductsGrid() {
     button.addEventListener('click', () => {
       const productId = button.dataset.productId;
 
-      addToCart(productId);
+      addToCartMainPage(productId);
       updateCartQuantity();
     });
   });

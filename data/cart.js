@@ -26,6 +26,28 @@ function saveToStorage() {
 
 
 export function addToCart(productId) {
+    let matchingItem;
+
+    cart.forEach((cartItem) => {
+        if (productId === cartItem.productId) {
+            matchingItem = cartItem;
+        }
+    });
+
+    if (matchingItem) {
+        matchingItem.quantity += 1;
+    } else {
+        cart.push({
+            productId: productId,
+            quantity: 1,
+            deliveryOptionId: '1'
+        });
+    }
+
+    saveToStorage();
+};
+
+export function addToCartMainPage(productId) {
     let addedMessageTimeoutId;
     let matchingItem;
     const quantitySelector = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
