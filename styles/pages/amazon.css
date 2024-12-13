@@ -120,6 +120,10 @@
   opacity: 0;
 }
 
+.added-to-cart-after{
+  opacity : 1;
+}
+
 .added-to-cart img {
   height: 20px;
   margin-right: 5px;
