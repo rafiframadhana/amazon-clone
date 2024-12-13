@@ -1,5 +1,5 @@
 import { addToCart, cart, loadFromStorage, removeFromCart, updateDeliveryOption } from "../../data/cart.js";
-import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOptions.js";
+import { getDeliveryOption } from "../../data/deliveryOptions.js";
 describe('test suite: addToCart', () => {
     beforeEach(() => {
         spyOn(localStorage, 'setItem');

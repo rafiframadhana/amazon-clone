@@ -1,10 +1,8 @@
-import { cart, addToCart, updateCartQuantity } from '../data/cart.js';
-import { products, loadProducts } from '../data/products.js';
-import { formatCurrency } from './utils/money.js';
+import { addToCart, updateCartQuantity } from '../data/cart.js';
+import { products, loadProductsFetch } from '../data/products.js';
 
-loadProducts(renderProductsGrid);
-
-function renderProductsGrid() {
+async function renderProductsGrid() {
+  await loadProductsFetch();
   updateCartQuantity();
 
   let productsHTML = '';
@@ -16,7 +14,6 @@ function renderProductsGrid() {
 
   if(search){
     filteredProducts = products.filter((product)=>{
-      //return product.name.includes(search);
       let matchingKeyword = false;
 
       product.keywords.forEach((keyword)=>{
@@ -111,4 +108,4 @@ function renderProductsGrid() {
   });
 }
 
-
+renderProductsGrid();

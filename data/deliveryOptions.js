@@ -36,10 +36,7 @@ function isWeekend(date) {
   return dayOfWeek === 'Saturday' || dayOfWeek === 'Sunday';
 }
 
-export function calculateDeliveryDate(deliveryOption) {
-  /* const today = dayjs();
-  const deliveryDate = today.add(deliveryOption.deliveryDays, 'days'); */
-  
+export function calculateDeliveryDate(deliveryOption) { 
   let remainingDays = deliveryOption.deliveryDays;
   let deliveryDate = dayjs();
   

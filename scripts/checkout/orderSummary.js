@@ -1,14 +1,12 @@
-import { cart, removeFromCart, calculateCartQuantity, updateQuantity, updateDeliveryOption } from '../../data/cart.js';
-import { products, getProduct } from '../../data/products.js';
+import { cart, removeFromCart, updateQuantity, updateDeliveryOption } from '../../data/cart.js';
+import { getProduct } from '../../data/products.js';
 import formatCurrency from '../utils/money.js';
-import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import { deliveryOptions, getDeliveryOption, calculateDeliveryDate } from '../../data/deliveryOptions.js';
 import { renderPaymentSummary } from './paymentSummary.js';
 import { renderCheckoutHeader } from './checkOutHeader.js';
 
 
 export function renderOrderSummary() {
-  //updateCartQuantity();
   let cartSummaryHTML = '';
 
 
@@ -122,8 +120,6 @@ export function renderOrderSummary() {
 
       removeFromCart(productId);
 
-      //updateCartQuantity();
-
       renderOrderSummary();
 
       renderPaymentSummary();
@@ -131,13 +127,6 @@ export function renderOrderSummary() {
       renderCheckoutHeader();
     });
   });
-
-  /*
-  function updateCartQuantity() {
-    const cartQuantity = calculateCartQuantity();
-    
-  }
-  */
 
 
   document.querySelectorAll('.js-update-quantity-link').forEach((link) => {
@@ -168,7 +157,6 @@ export function renderOrderSummary() {
   });
 
 
-
   function saveQuantityInput(productId) {
     const inputQuantity = document.querySelector(`.js-quantity-input-${productId}`);
     const newQuantity = Number(inputQuantity.value);
@@ -190,7 +178,6 @@ export function renderOrderSummary() {
     quantityLabel.innerHTML = newQuantity;
 
     renderCheckoutHeader();
-    //updateCartQuantity();
   }
 
 
