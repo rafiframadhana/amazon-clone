@@ -15,17 +15,16 @@ async function loadPage() {
 
     let productDetails;
 
-    order.products.forEach((details)=>{
-        if(details.productId === product.id){
+    order.products.forEach((details) => {
+        if (details.productId === product.id) {
             productDetails = details;
         }
-    })    
-        
-    
+    });
+
     const today = dayjs();
     const orderTime = dayjs(order.orderTime);
     const deliveryTime = dayjs(productDetails.estimatedDeliveryTime);
-    const percentProgress = ((today - orderTime)/ (deliveryTime - orderTime)) * 100;
+    const percentProgress = ((today - orderTime) / (deliveryTime - orderTime)) * 100;
     const deliveredMessage = today < deliveryTime ? 'Arriving on' : 'Delivered on';
 
     const trackingHTML = `
@@ -62,10 +61,23 @@ async function loadPage() {
                 <div class="progress-bar-container">
                 <div class="progress-bar" style="width : ${percentProgress}%;"></div>
                 </div>
-            `
-    
+            `;
+
     document.querySelector('.js-order-tracking').innerHTML = trackingHTML;
     updateCartQuantity();
+
+    // search product
+    document.querySelector('.js-search-button').addEventListener('click', () => {
+        const searchTerm = document.querySelector('.js-search-bar').value;
+        window.location.href = `amazon.html?search=${encodeURIComponent(searchTerm)}`;
+    });
+
+    document.querySelector('.js-search-bar').addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            const searchTerm = document.querySelector('.js-search-bar').value;
+            window.location.href = `amazon.html?search=${encodeURIComponent(searchTerm)}`;
+        }
+    });
 }
 
 loadPage();
