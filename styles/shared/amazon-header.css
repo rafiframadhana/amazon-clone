@@ -3,11 +3,9 @@
   color: white;
   padding-left: 15px;
   padding-right: 15px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -139,11 +137,9 @@
   color: rgb(240, 136, 4);
   font-size: 16px;
   font-weight: 700;
-
   position: absolute;
   top: 4px;
   left: 22px;
-  
   width: 26px;
   text-align: center;
 }

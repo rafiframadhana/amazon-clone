@@ -4,11 +4,6 @@
   margin-bottom: 100px;
   padding-left: 30px;
   padding-right: 30px;
-
-  /* margin-left: auto;
-     margin-right auto;
-     Is a trick for centering an element horizontally
-     without needing a container. */
   margin-left: auto;
   margin-right: auto;
 }
@@ -67,7 +62,6 @@
 .progress-bar-container {
   height: 25px;
   width: 100%;
-
   border: 1px solid rgb(200, 200, 200);
   border-radius: 50px;
   overflow: hidden;
