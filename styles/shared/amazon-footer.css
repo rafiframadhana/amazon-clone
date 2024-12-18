@@ -1,0 +1,144 @@
+.amazon-footer {
+    background-color: rgb(19, 25, 33);
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 70px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.amazon-footer-left-section {
+    padding-left: 150px;
+}
+
+.amazon-footer-left-section p {
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.amazon-footer-left-section p span {
+    font-weight: 100;
+}
+
+.amazon-footer-middle-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    align-items: top;
+    font-weight: bold;
+}
+
+.amazon-footer-middle-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.amazon-footer-middle-section ul li {
+    margin-bottom: 8px;
+}
+
+.amazon-footer-middle-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.amazon-footer-middle-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.amazon-footer-right-section {
+    padding-right: 150px;
+}
+
+.footer-jasmine-logo {
+    height: 60px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.amazon-footer-right-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.amazon-footer-right-section a:hover {
+    text-decoration: underline;
+}
+
+.amazon-footer-tracking-page {
+    background-color: rgb(19, 25, 33);
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 200px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .amazon-footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .amazon-footer-left-section,
+    .amazon-footer-middle-section,
+    .amazon-footer-right-section {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .amazon-footer-left-section p,
+    .amazon-footer-middle-section p {
+        font-size: 14px;
+    }
+
+    .amazon-footer-middle-section ul li {
+        margin-bottom: 5px;
+    }
+
+    .footer-logo {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .footer-jasmine-logo {
+        height: 50px;
+        margin-bottom: 5px;
+    }
+
+    .amazon-footer-right-section a {
+        font-size: 14px;
+    }
+
+    .amazon-footer-tracking-page {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
