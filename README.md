@@ -60,7 +60,7 @@ This project uses **Jasmine** to test the JavaScript functionality. Tests are lo
 
 To run the Jasmine tests locally:
 
-1. Open the **Jasmine HTML Runner** file (usually `SpecRunner.html`) in your browser.
+1. Open the **Jasmine HTML Runner** file (`test.html`) in your browser.
 2. The tests will automatically run, and the results will be displayed in the browser window.
 
 ## Contributions
